@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    .container {
+        width: 300px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    label {
+        font-weight: bold;
+    }
+    input, select {
+        width: calc(100% - 10px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form name="form1" method="post" action="rstep2.jsp">
+            <label for="n1">UID</label>
+            <input type="text" id="n1" name="n1" required>
+            <label for="n4">Address</label>
+            <input type="text" id="n4" name="n4">
+            <label for="n2">Password</label>
+            <input type="password" id="n2" name="n2" required>
+            <label for="n3">Name</label>
+            <input type="text" id="n3" name="n3">
+            <label for="n5">Security Q</label>
+            <select id="n5" name="n5">
+                <option value="q1">What is your pet's name?</option>
+                <option value="q2">What is your mother's maiden name?</option>
+            </select>
+            <label for="n6">Answer</label>
+            <input type="text" id="n6" name="n6">
+            <input type="submit" name="REGISTER" value="SUBMIT">
+        </form>
+    </div>
+</body>
+</html>

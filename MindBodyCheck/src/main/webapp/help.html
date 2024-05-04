@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Feedback.css">
+    <title>Zen Space</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;1,100;1,300&family=Fira+Sans:wght@300&family=Roboto+Condensed&display=swap');
+
+        body {
+            background-color: #f9f9f9;
+            overflow: hidden;
+            font-size: 16px;
+        }
+
+        * {
+            font-family: 'Roboto Condensed', 'ira Sans', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .ghar {
+            margin: 5% auto;
+            padding: 20px;
+            max-width: 65%;
+            background: linear-gradient(to right, #4a90e2, #63b8ff);
+            border: 1px solid #4a90e2;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            padding: 20px;
+            
+            border-radius: 9px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: border-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #215dc5;
+        }
+
+        .st {
+            padding-top: 2%;
+            color: white;
+            text-indent: 30px;
+            border-radius: 5px;
+        }
+
+        .rat {
+            margin: 25px;
+            margin-left: 0;
+            text-align: left;
+        }
+
+        .rating {
+            color: white;
+            font-weight: bold;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label {
+            color: white;
+            margin-right: 40px;
+            cursor: pointer;
+            position: relative;
+            padding-left: 28px;
+            line-height: 24px;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        input[type="radio"] + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="radio"]:checked + label:before {
+            background-color: #215dc5;
+        }
+
+        input[type="submit"] {
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 180px;
+            background-color: #215dc5;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2276db;
+            transform: scale(1.05);
+            font-size: 23px;
+            font-weight: bolder;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .ghar {
+                margin: 5% 5%;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+            }
+        }
+
+    </style>
+    <style>
+   
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 28px;
+        
+        
+        
+        
+        display:fixed;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+
+    .logo img {
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #19e8ff;
+    }
+    
+
+    .login-btn {
+        border: none;
+        outline: none;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+<style>   .restaurant-info {
+    background-color: black;
+    padding-top: 2%;
+    display: flex;
+    flex-wrap:nowrap wrap;
+    text-align: center;
+    text-size-adjust:fit-content;
+    /* padding: 3rem; */
+
+}
+
+.info-row {
+    align-items: center;
+    /* margin-bottom: 1rem; */
+    margin-left: 13%;
+}
+
+.info-title {
+    color: white;
+    font-family: sans-serif;
+    font-size: 100%;
+    font-style: italic;
+   
+}
+
+.data{
+    text-decoration: none;
+
+    font: 100px;
+    color: #0056b3;
+}
+
+li{
+    padding-top: 8%;
+}
+.contact-details{
+    padding-top: 8%;
+}
+ul{
+    list-style-type: none;
+}
+.Tarun{
+    font-style: italic;
+    align-items: center;
+    background-color: black;
+    color: #0056b3;
+
+}
+
+
+
+
+
+</style> 
+</head>
+
+<body>
+	<header>
+	    <div class="container">
+	        <nav class="navbar">
+	            <a href="#" class="logo">
+	                <img src="logo.png" alt="logo">
+	                <h2>Logo</h2>
+	            </a>
+	            <ul class="nav-links">
+	                <li><a href="main.html">Home</a></li>
+	                <li><a href="about2.html">About Us</a></li>
+	                <li><a href="help.html">Help</a></li>
+	            </ul>
+	            <button class="login-btn">Log Out</button>
+	        </nav>
+	    </div>
+	</header>
+    <!--MAIN BODY STARTS-->
+    <div class="ghar">
+        <div class="st">
+            <h2>We Value Your Feedback</h2>
+        </div>
+        <div class="container">
+            <form action="help.jsp">
+                <p><input type="email" name="Email" placeholder="Enter your Email" required></p>
+                <p><textarea name="Message" id="Message" placeholder="Write About Your Experience" required></textarea></p>
+                <p class="rat"><span class="rating">Feedback Rating:</span>
+                    <input type="radio" id="rating1" name="feedback" value="1" required>
+                    <label for="rating1">1</label>
+
+                    <input type="radio" id="rating2" name="feedback" value="2">
+                    <label for="rating2">2</label>
+
+                    <input type="radio" id="rating3" name="feedback" value="3">
+                    <label for="rating3">3</label>
+
+                    <input type="radio" id="rating4" name="feedback" value="4">
+                    <label for="rating4">4</label>
+
+                    <input type="radio" id="rating5" name="feedback" value="5">
+                    <label for="rating5">5</label>
+                </p>
+                <div>
+                    <input type="Submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--MAIN BODY ENDS-->
+    
+<footer class="restaurant-info">
+    <div class="info-row">
+      <h2 class="info-title">Contact Us</h2>
+      <div class="contact-details">
+        <a class="data" href="mailto:rahul@123gmail.com">HealthWallah@123gmail.com</a>
+      </div>
+      <div class="contact-details">
+        <a class="data" href="tel:+9198362882382">+91 98362882382</a>
+      </div>
+      <div class="contact-details">
+        <a class="data" href="#">Help</a>
+      </div>
+    </div>
+  
+    <div class="info-row">
+      <h2 class="info-title">Branch Locations</h2>
+      <ul class="branch-list">
+        <li ><a class="data" href="#">Sodepur</a></li>
+        <li><a class="data" href="#">DumDum</a></li>
+        <li ><a class="data" href="#">Bakura</a></li>
+        <li ><a class="data" href="#">KaliGhat</a></li>
+        <li ><a class="data" href="#">Newtown</a></li>       
+      </ul>
+    </div>
+  
+    <div class="info-row">
+      <h2 class="info-title">Quick Access</h2>
+      <ul class="quick-links">
+        <li><a class="data" href="#">Home</a></li>
+        <li ><a class="data" href="#">About Us</a></li>
+        <li><a class="data" href="#">Results</a></li>
+        <li><a class="data" href="#">Help</a></li>
+      </ul>
+    </div>
+  
+    <div class="info-row">
+      <h2 class="info-title">Follow Us</h2>
+      <ul class="social-media">
+        <li><a href="#"class="data">Facebook</a></li>
+        <li><a href="#" class="data">Instagram</a></li>
+        <li><a href="#" class="data">Linkedin</a></li>
+      </ul>
+    </div>
+  </footer>
+  
+</body>
+
+</html>

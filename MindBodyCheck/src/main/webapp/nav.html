@@ -1,0 +1,97 @@
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="logo">
+                <h2>Logo</h2>
+            </a>
+            <ul class="nav-links">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="about2.html">About Us</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+            <button class="login-btn">Log Out</button>
+        </nav>
+    </div>
+</header>
+<style>
+   
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 28px;
+        
+        
+        
+        
+        display:fixed;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+
+    .logo img {
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #19e8ff;
+    }
+
+    .login-btn {
+        border: none;
+        outline: none;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
