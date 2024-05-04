@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive team section</title>
+    <link rel="stylesheet" type="text/css" href="about.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="logo">
+                <h2>Logo</h2>
+            </a>
+            <ul class="nav-links">
+                <li><a href="Main.jsp">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul><div class="logout_name">         
+            <form action="Home.html" method="post">
+            <button class="login-btn">Log Out</button>
+            </form>
+            </div>
+        </nav>
+    </div>
+</header>
+<style>
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0 ;
+        padding: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+
+    .logo img {
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+         margin-left:30px;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        padding-left:220px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #19e8ff;
+    }
+
+    .login-btn {
+        border: none;
+        outline: none;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        margin-right:30px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+        background-color: #0056b3;
+    }
+    .logout_name{
+    display:flex;
+    gap:100px;
+    }
+    
+    
+    /* Sticky Navbar */
+        .navbar.sticky {
+            position: fixed;
+            top: 0;
+            
+            width: 100%;
+            z-index: 1000;
+            
+         background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+</style>
+
+    <script>
+    // Sticky Navbar Script
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("sticky", window.scrollY > 0);
+    });
+</script>
+    <section class="team">
+        <div class="center">
+            <h1>Our Team</h1>
+        </div>
+
+        <div class="team-content">
+            <div class="box">
+                <img src="ra.jpg">
+                <h3>Rahul Chakraborty</h3>
+                <h5>A91005221073</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/rahul-chakraborty-80169428b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+            </div>
+
+            
+            <div class="box">
+                <img src="ar.jpg">
+                <h3>Arijeet Sarkar</h3>
+                <h5>A91005221046</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/arijeet-s-8967621ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="ri-linkedin-box-fill"></i></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="ta.jpg">
+                <h3>Tarun Kumar Dey</h3>
+                <h5>A91005221040</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/tarun-dey-5669b4247/"><i class="ri-linkedin-box-fill"></i></i></a>
+                </div>
+            </div>
+            
+
+            <div class="box">
+                <img src="he.jpg">
+                <h3>Hemanta Bag</h3>
+                <h5>A91005221079</h5>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/hemanta-bag-1b004b238/"><i class="ri-linkedin-box-fill"></i></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="pp.jpg">
+                <h3>Pratyay Paul</h3>
+                <h5>A910052210--</h5>
+                <div class="icons">
+                    <a href="#"><i class="ri-linkedin-box-fill"></i></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
